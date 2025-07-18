@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indivibe Logo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .logo-container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(20px);
+            border-radius: 40px;
+            padding: 80px 60px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo-symbol {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 40px;
+            background: linear-gradient(135deg, #00c3ff 0%, #1cff4d 60%, #ff61a6 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 72px;
+            font-weight: 900;
+            color: #fff;
+            text-shadow: 0 8px 32px #00c3ff, 0 2px 8px #ff61a6;
+            animation: float 3s ease-in-out infinite;
+            overflow: hidden;
+        }
+
+        /* Extra style for the IV text in logo-symbol for 3D/pro effect */
+        .iv-it {
+            color: #fff;
+            letter-spacing: 2px;
+            font-size: 72px;
+            font-weight: 900;
+            text-shadow: 0 8px 32px #00c3ff, 0 2px 8px #ff61a6;
+            font-family: 'Segoe UI', 'Roboto Mono', 'Fira Mono', monospace, sans-serif;
+        }
+
+        .logo-symbol::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 60px;
+            background: radial-gradient(ellipse at center, #e0f7fa 0%, transparent 80%);
+            opacity: 0.5;
+            filter: blur(8px);
+        }
+
+        .logo-symbol::after {
+            content: '';
+            position: absolute;
+            inset: 8px 16px 24px 16px;
+            background: linear-gradient(135deg, rgba(0,195,255,0.12), transparent);
+            border-radius: 40px 40px 60px 60px / 40px 40px 100px 100px;
+            pointer-events: none;
+        }
+
+        .logo-glow {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 180px;
+            height: 60px;
+            background: radial-gradient(ellipse at center, #00c3ff 0%, #ffff1c 60%, transparent 100%);
+            opacity: 0.7;
+            filter: blur(18px);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .logo-text {
+            font-size: 64px;
+            font-weight: 800;
+            background: linear-gradient(90deg, #ff512f, #dd2476, #1a2980);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 5s ease-in-out infinite;
+            letter-spacing: -2px;
+            margin-bottom: 20px;
+        }
+
+        .logo-tagline {
+            color: #ff512f;
+            font-size: 18px;
+            font-weight: 400;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .logo-tagline::after {
+            display: none;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(2deg); }
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.1); opacity: 1; }
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @media (max-width: 768px) {
+            .logo-container {
+                padding: 40px 30px;
+            }
+            
+            .logo-symbol {
+                width: 150px;
+                height: 150px;
+                font-size: 54px;
+                border-radius: 38px;
+            }
+            
+            .logo-text {
+                font-size: 48px;
+            }
+            
+            .logo-tagline {
+                font-size: 14px;
+            }
+            
+            .mini-logo {
+                width: 60px;
+                height: 60px;
+                font-size: 20px;
+                border-radius: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <!-- Main Logo -->
+        <div class="logo-symbol">
+            <span class="iv-it">IV</span>
+            <div class="logo-glow"></div>
+        </div>
+        
+        <div class="logo-text">
+            Indivibe
+        </div>
+        
+        <div class="logo-tagline">
+            Social • Commerce • Intelligence
+        </div>
+        
+        <!-- Logo Variants removed as requested -->
+    </div>
+</body>
+</html>
